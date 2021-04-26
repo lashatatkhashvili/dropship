@@ -72,6 +72,7 @@
   top: 0;
   height: 120px;
   width: 100%;
+  border-bottom: 1px solid #dddddd;
 }
 
 .content__header {
@@ -245,4 +246,130 @@
   }
 }
 
-/* Catalog */
+/* Products */
+
+.products {
+  width: 100%;
+  display: flex;
+}
+
+.products-wrapper {
+  display: flex;
+  margin: 0;
+  padding: 20px;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  height: calc(100vh - 120px);
+  overflow: auto;
+  width: 100%;
+}
+
+.product {
+  width: calc(100% / 5 - 20px);
+  margin: 0 10px 20px;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e4e5ec;
+  position: relative;
+  cursor: pointer;
+}
+
+.product:hover {
+  border: 1px solid #61d5df;
+}
+
+@media (max-width: 1770px) {
+  .product {
+    width: calc(100% / 4 - 20px);
+  }
+}
+
+@media (max-width: 1600px) {
+  .product {
+    width: calc(100% / 3 - 20px);
+  }
+}
+
+@media (max-width: 1366px) {
+  .product {
+    width: calc(100% / 2 - 20px);
+  }
+}
+
+.product__image {
+  height: 205px;
+  padding: 10px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.product__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.product__name {
+  padding: 0 16px 11px;
+}
+
+.product__name-heading {
+  text-transform: uppercase;
+  font-weight: 700;
+  height: 30px;
+  overflow: hidden;
+  width: 100%;
+  font-family: Gilroy;
+  font-size: 14px;
+  color: #29304b;
+  margin: 0;
+}
+
+.product__info {
+  height: 34px;
+  padding: 10px 14px;
+  border-top: 1px solid #e4e5ec;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  white-space: nowrap;
+}
+
+.product__info-paragraph {
+  font-family: Helvetica;
+  font-style: normal;
+  font-size: 14px;
+  color: #47506e;
+  position: relative;
+  letter-spacing: normal;
+  text-transform: capitalize;
+}
+
+/* Sort */
+
+.content__sort,
+.content__sort-select {
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: #a8a4a4;
+}
+
+.content__sort-select {
+  margin-left: 10px;
+  border: none;
+}
+
+select {
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+}

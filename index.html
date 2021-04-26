@@ -44,7 +44,7 @@
                 </div>
 
                 <div class="content__header-right">
-                  <form class="content__header-form">
+                  <div class="content__header-form">
                     <input
                       type="text"
                       id="search"
@@ -54,7 +54,7 @@
                     <button class="content__form-btn">
                       <i class="fa fa-search search-icon"></i>
                     </button>
-                  </form>
+                  </div>
                   <button class="content__header-btn content__header-btn--add">
                     ADD TO INVENTORY
                   </button>
@@ -67,24 +67,45 @@
                 </div>
               </header>
               <div class="content__sort">
-                <label for="cars">Choose a car:</label>
-                <select id="cars" name="cars">
-                  <option value="volvo">Volvo XC90</option>
-                  <option value="saab">Saab 95</option>
-                  <option value="mercedes">Mercedes SLK</option>
-                  <option value="audi">Audi TT</option>
+                <label for="sort"><i class="fa fa-signal"></i> Sort BY: </label>
+                <select id="sort" name="cars" class="content__sort-select">
+                  <option value="new">New Arrivals</option>
+                  <option value="high">Price: High To Low</option>
+                  <option value="low">Price: High Low To High</option>
+                
                 </select>
               </div>
             </div>
-            <div class="catalog" style="font-size: 90px">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
-              laudantium magnam, nulla mollitia dolor odit vel, provident
-              doloremque officiis similique incidunt laboriosam iste molestias
-              facere eaque vero explicabo! Praesentium, exercitationem!
+            <div class="products">
+              <div class="products-wrapper">
+                <div class="product">
+                  <div class="product__image">
+                    <img
+                      src="https://firebasestorage.googleapis.com/v0/b/dropship-d7542.appspot.com/o/uploads%2Fproducts%2FWbDQgncoCKLdKaVPHXTF%2F200x200_ZvmOuEedspXDxS9zhESxzul8etjYAD.jpg?alt=media"
+                      alt="product image"
+                      height="127"
+                      width="191"
+                    />
+                  </div>
+                  <div class="product__name">
+                    <h3 class="product__name-heading">
+                      LIQUID ALOE VERA AND COCONUT HAND SOAP BABARIA (500 ML)
+                    </h3>
+                  </div>
+                  <div class="product__info">
+                    <p product__info-paragraph>RRP: $6</p>
+                    <p product__info-paragraph>Profit: 25% / $2</p>
+                    <p product__info-paragraph>cost: $4</p>
+                  </div>
+                </div>
+
+                
             </div>
           </section>
         </div>
       </main>
     </div>
+
+    <script src="Catalog.js" type="module"></script>
   </body>
 </html>
