@@ -1,4 +1,4 @@
-import { products, product } from "./API.js";
+import { products, product } from "./Product.js";
 
 const productsWrapper = document.querySelector(".products-wrapper");
 const search = document.querySelector("#search");
