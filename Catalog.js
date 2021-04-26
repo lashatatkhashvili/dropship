@@ -4,6 +4,8 @@ const productsWrapper = document.querySelector(".products-wrapper");
 const search = document.querySelector("#search");
 const sort = document.querySelector("#sort");
 
+// Products
+
 const getProducts = async () => {
   const data = await products();
 
@@ -11,6 +13,8 @@ const getProducts = async () => {
 };
 
 getProducts();
+
+// Search
 
 const searchFunc = async (e) => {
   const data = await products();
@@ -23,6 +27,10 @@ const searchFunc = async (e) => {
   productsWrapper.innerHTML = product(arr);
 };
 
+search.addEventListener("keyup", searchFunc);
+
+// Sort
+
 const sortFunc = async (e) => {
   const data = await products();
 
@@ -34,5 +42,4 @@ const sortFunc = async (e) => {
   productsWrapper.innerHTML = product(arr);
 };
 
-search.addEventListener("keyup", searchFunc);
 sort.addEventListener("change", sortFunc);
