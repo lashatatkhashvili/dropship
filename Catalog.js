@@ -2,6 +2,7 @@ import { products, product } from "./API.js";
 
 const productsWrapper = document.querySelector(".products-wrapper");
 const search = document.querySelector("#search");
+const sort = document.querySelector("#sort");
 
 const getProducts = async () => {
   const data = await products();
@@ -12,16 +13,26 @@ const getProducts = async () => {
 getProducts();
 
 const searchFunc = async (e) => {
-  e.preventDefault();
   const data = await products();
 
   let arr = data.filter(
     (item) =>
       item.title.toUpperCase().indexOf(e.target.value.toUpperCase()) !== -1
   );
-  console.log(arr, e.target.value);
+
+  productsWrapper.innerHTML = product(arr);
+};
+
+const sortFunc = async (e) => {
+  const data = await products();
+
+  let arr = data;
+
+  e.target.value == "low" && (arr = data.sort((a, b) => a.price - b.price));
+  e.target.value == "high" && (arr = data.sort((a, b) => b.price - a.price));
+
   productsWrapper.innerHTML = product(arr);
 };
 
 search.addEventListener("keyup", searchFunc);
-search.addEventListener("submit", searchFunc);
+sort.addEventListener("change", sortFunc);
