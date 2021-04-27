@@ -78,6 +78,10 @@
   height: 100%;
 }
 
+.content__header-btn--clear {
+  display: none;
+}
+
 @media (max-width: 950px) {
   .catalog__nav {
     display: none;

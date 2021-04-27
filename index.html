@@ -34,7 +34,7 @@
 
                   <button
                     class="content__header-btn content__header-btn--big"
-                    onclick="addAll()"
+                    id="add-all"
                   >
                     SELECT ALL
                   </button>
@@ -47,10 +47,18 @@
                   </span>
                   <button
                     class="content__header-btn content__header-btn--small"
+                    id="toggle-add"
                   >
                     <i class="fa fa-check check-icon" aria-hidden="true"></i>
                   </button>
                 </div>
+
+                <button
+                  class="content__header-btn content__header-btn--clear"
+                  id="clear"
+                >
+                  Clear
+                </button>
 
                 <div class="content__header-right">
                   <div class="content__header-form">
@@ -116,21 +124,6 @@
         count.innerHTML = elem.checked
           ? Number(count.innerHTML) + 1
           : Number(count.innerHTML) - 1;
-      }
-
-      function addAll() {
-        let count = document.querySelector("#count");
-        const elems = document.querySelectorAll(".product__check");
-
-        count.innerHTML = elems.length;
-        for (let i = 0; i < elems.length; i++) {
-          elems[i].parentNode.classList.toggle("product__add--click");
-          elems[i].parentNode.parentNode.classList.toggle("product--border");
-          elems[i].parentNode.children[1].classList.toggle(
-            "product__check-label--non"
-          );
-          elems[i].checked = true;
-        }
       }
     </script>
   </body>
