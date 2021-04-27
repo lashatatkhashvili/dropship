@@ -1,4 +1,4 @@
-import { products, product } from "./Product.js";
+import { products, product, loading } from "./Product.js";
 
 const productsWrapper = document.querySelector(".products-wrapper");
 const search = document.querySelector("#search");
@@ -10,6 +10,7 @@ const toggleAdd = document.querySelector("#toggle-add");
 // Products
 
 const getProducts = async () => {
+  productsWrapper.innerHTML = loading;
   const data = await products();
 
   productsWrapper.innerHTML = product(data);
@@ -20,6 +21,7 @@ getProducts();
 // Search
 
 const searchFunc = async (e) => {
+  productsWrapper.innerHTML = loading;
   const data = await products();
 
   let arr = data.filter(
@@ -35,6 +37,7 @@ search.addEventListener("keyup", searchFunc);
 // Sort
 
 const sortFunc = async (e) => {
+  productsWrapper.innerHTML = loading;
   const data = await products();
 
   let arr = data;
