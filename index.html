@@ -26,13 +26,22 @@
             <div class="content__header-wrapper">
               <header class="content__header">
                 <div class="content__selected-items">
-                  <button class="content__header-btn content__header-btn--big">
+                  <button
+                    class="content__header-btn content__header-btn--filter"
+                  >
+                    Filter
+                  </button>
+
+                  <button
+                    class="content__header-btn content__header-btn--big"
+                    onclick="addAll()"
+                  >
                     SELECT ALL
                   </button>
                   <span class="content__selected-separate"></span>
                   <span class="content__selected-title">
                     <span class="content__selected-number"
-                      >selected 0 out of</span
+                      >selected <span id="count">0</span> out of</span
                     >
                     <span class="content__products">274,290 products</span>
                   </span>
@@ -76,7 +85,7 @@
               </header>
               <div class="content__sort">
                 <label for="sort"
-                  ><i class="fa fa-bars alt-icon"></i> Sort BY:
+                  ><i class="fa fa-bars alt-icon"></i> Sort By:
                 </label>
                 <select id="sort" name="cars" class="content__sort-select">
                   <option value="new">New Arrivals</option>
@@ -94,5 +103,35 @@
     </div>
 
     <script src="Catalog.page.js" type="module"></script>
+    <script>
+      function check(elem) {
+        elem.parentNode.classList.toggle("product__add--click");
+        elem.parentNode.parentNode.classList.toggle("product--border");
+        elem.parentNode.children[1].classList.toggle(
+          "product__check-label--non"
+        );
+
+        let count = document.querySelector("#count");
+
+        count.innerHTML = elem.checked
+          ? Number(count.innerHTML) + 1
+          : Number(count.innerHTML) - 1;
+      }
+
+      function addAll() {
+        let count = document.querySelector("#count");
+        const elems = document.querySelectorAll(".product__check");
+
+        count.innerHTML = elems.length;
+        for (let i = 0; i < elems.length; i++) {
+          elems[i].parentNode.classList.toggle("product__add--click");
+          elems[i].parentNode.parentNode.classList.toggle("product--border");
+          elems[i].parentNode.children[1].classList.toggle(
+            "product__check-label--non"
+          );
+          elems[i].checked = true;
+        }
+      }
+    </script>
   </body>
 </html>

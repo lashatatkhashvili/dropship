@@ -8,24 +8,28 @@ export const product = (data) => {
   data.map((item) => {
     productHtml += `
     <div class="product">
+      <div class="product__add">
+        <input type="checkbox" class="product__check" onclick="check(this)"/>
+        <label for="check" class="product__check-label"
+          >Add To Inventory</label
+        >
+      </div>
       <div class="product__image">
         <img
-          src = ${item.image}
+          src="${item.image}"
           alt="product image"
           height="127"
           width="191"
         />
       </div>
-    <div class="product__name">
-      <h3 class="product__name-heading">
-        ${item.title}
-      </h3>
-    </div>
-    <div class="product__info">
-      <p product__info-paragraph>RRP: $6</p>
-      <p product__info-paragraph>Profit: 25% / $2</p>
-      <p product__info-paragraph>cost: $${item.price}</p>
-    </div>
+      <div class="product__name">
+        <h3 class="product__name-heading">${item.title}</h3>
+      </div>
+      <div class="product__info">
+        <p product__info-paragraph>RRP: $6</p>
+        <p product__info-paragraph>Profit: 25% / $2</p>
+        <p product__info-paragraph>cost: $${item.price}</p>
+      </div>
   </div>
 
 `;
