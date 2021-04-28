@@ -54,24 +54,28 @@ sort.addEventListener("change", sortFunc);
 
 // Add all
 
-function addAll() {
+const helper = (boolean) => {
   let count = document.querySelector("#count");
   const elems = document.querySelectorAll(".product__check");
-  const clear = document.querySelector("#clear");
-
-  clear.classList.remove("content__header-btn--clear");
 
   count.innerHTML = elems.length;
   for (let i = 0; i < elems.length; i++) {
-    if (elems[i].checked == false) {
+    if (elems[i].checked == boolean) {
       elems[i].parentNode.classList.toggle("product__add--click");
       elems[i].parentNode.parentNode.classList.toggle("product--border");
       elems[i].parentNode.children[1].classList.toggle(
         "product__check-label--non"
       );
-      elems[i].checked = true;
+      elems[i].checked = !boolean;
     }
   }
+};
+
+function addAll() {
+  const clear = document.querySelector("#clear");
+
+  clear.classList.remove("content__header-btn--clear");
+  helper(false);
 }
 
 add.addEventListener("click", addAll);
@@ -79,23 +83,10 @@ add.addEventListener("click", addAll);
 // Clear
 
 function clearFunc() {
-  let count = document.querySelector("#count");
-  const elems = document.querySelectorAll(".product__check");
   const clear = document.querySelector("#clear");
 
   clear.classList.add("content__header-btn--clear");
-
-  count.innerHTML = 0;
-  for (let i = 0; i < elems.length; i++) {
-    if (elems[i].checked == true) {
-      elems[i].parentNode.classList.toggle("product__add--click");
-      elems[i].parentNode.parentNode.classList.toggle("product--border");
-      elems[i].parentNode.children[1].classList.toggle(
-        "product__check-label--non"
-      );
-      elems[i].checked = false;
-    }
-  }
+  helper(true);
 }
 
 clear.addEventListener("click", clearFunc);
@@ -114,27 +105,7 @@ function toggleAddFunc() {
     }
   }
 
-  for (let i = 0; i < elems.length; i++) {
-    if (check == false) {
-      elems[i].parentNode.classList.add("product__add--click");
-      elems[i].parentNode.parentNode.classList.add("product--border");
-      elems[i].parentNode.children[1].classList.add(
-        "product__check-label--non"
-      );
-      elems[i].checked = true;
-    }
-  }
-
-  for (let i = 0; i < elems.length; i++) {
-    if (check == true) {
-      elems[i].parentNode.classList.remove("product__add--click");
-      elems[i].parentNode.parentNode.classList.remove("product--border");
-      elems[i].parentNode.children[1].classList.remove(
-        "product__check-label--non"
-      );
-      elems[i].checked = false;
-    }
-  }
+  helper(check);
 }
 
 toggleAdd.addEventListener("click", toggleAddFunc);
