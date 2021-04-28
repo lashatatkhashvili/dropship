@@ -38,47 +38,47 @@ export const product = (data) => {
   return productHtml;
 };
 
-export const loading = `<div class="product" style="min-height: 350px">
+export const loading = `<div class="product" style="min-height: 280px">
 <div class="product__image">
   <img src="./assets/load.gif" width="50" height="50" />
 </div>
 </div>
-<div class="product" style="min-height: 350px">
+<div class="product" style="min-height: 280px">
 <div class="product__image">
   <img src="./assets/load.gif" width="50" height="50" />
 </div>
 </div>
-<div class="product" style="min-height: 350px">
+<div class="product" style="min-height: 280px">
 <div class="product__image">
   <img src="./assets/load.gif" width="50" height="50" />
 </div>
 </div>
-<div class="product" style="min-height: 350px">
+<div class="product" style="min-height: 280px">
 <div class="product__image">
   <img src="./assets/load.gif" width="50" height="50" />
 </div>
 </div>
-<div class="product" style="min-height: 350px">
+<div class="product" style="min-height: 280px">
 <div class="product__image">
   <img src="./assets/load.gif" width="50" height="50" />
 </div>
 </div>
-<div class="product" style="min-height: 350px">
+<div class="product" style="min-height: 280px">
 <div class="product__image">
   <img src="./assets/load.gif" width="50" height="50" />
 </div>
 </div>
-<div class="product" style="min-height: 350px">
+<div class="product" style="min-height: 280px">
 <div class="product__image">
   <img src="./assets/load.gif" width="50" height="50" />
 </div>
 </div>
-<div class="product" style="min-height: 350px">
+<div class="product" style="min-height: 280px">
 <div class="product__image">
   <img src="./assets/load.gif" width="50" height="50" />
 </div>
 </div>
-<div class="product" style="min-height: 350px">
+<div class="product" style="min-height: 280px">
 <div class="product__image">
   <img src="./assets/load.gif" width="50" height="50" />
 </div>

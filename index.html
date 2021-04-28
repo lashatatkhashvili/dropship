@@ -120,6 +120,24 @@
     <script src="Catalog.page.js" type="module"></script>
     <script>
       function check(elem) {
+        const clear = document.querySelector("#clear");
+        const elems = document.querySelectorAll(".product__check");
+
+        if (window.innerWidth > 1155) {
+          let check = false;
+
+          for (let i = 0; i < elems.length; i++) {
+            if (elems[i].checked == true) {
+              check = true;
+              break;
+            }
+          }
+
+          check
+            ? clear.classList.remove("content__header-btn--clear")
+            : clear.classList.add("content__header-btn--clear");
+        }
+
         elem.parentNode.classList.toggle("product__add--click");
         elem.parentNode.parentNode.classList.toggle("product--border");
         elem.parentNode.children[1].classList.toggle(

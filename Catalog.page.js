@@ -58,7 +58,7 @@ const helper = (boolean) => {
   let count = document.querySelector("#count");
   const elems = document.querySelectorAll(".product__check");
 
-  count.innerHTML = elems.length;
+  boolean ? (count.innerHTML = 0) : (count.innerHTML = elems.length);
   for (let i = 0; i < elems.length; i++) {
     if (elems[i].checked == boolean) {
       elems[i].parentNode.classList.toggle("product__add--click");
@@ -94,7 +94,6 @@ clear.addEventListener("click", clearFunc);
 // Toggle Add
 
 function toggleAddFunc() {
-  let count = document.querySelector("#count");
   const elems = document.querySelectorAll(".product__check");
 
   let check = true;
