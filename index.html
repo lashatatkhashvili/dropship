@@ -65,11 +65,18 @@
                     <input
                       type="text"
                       id="search"
-                      class="content__search"
+                      class="content__search content__search--hide"
                       placeholder="search..."
                     />
-                    <button class="content__form-btn">
+                    <button class="content__form-btn" id="search-btn">
                       <i class="fa fa-search search-icon"></i>
+                    </button>
+
+                    <button
+                      class="content__search-close content__search--hide content__search-close--hide"
+                      id="search-hide"
+                    >
+                      <i class="fa fa-times close-icon"></i>
                     </button>
                   </div>
                   <button class="content__header-btn content__header-btn--add">

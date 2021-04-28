@@ -6,6 +6,8 @@ const sort = document.querySelector("#sort");
 const add = document.querySelector("#add-all");
 const clear = document.querySelector("#clear");
 const toggleAdd = document.querySelector("#toggle-add");
+const searchBtn = document.querySelector("#search-btn");
+const searchHide = document.querySelector("#search-hide");
 
 // Products
 
@@ -136,3 +138,19 @@ function toggleAddFunc() {
 }
 
 toggleAdd.addEventListener("click", toggleAddFunc);
+
+//  Search hide-show
+
+const searchToggle = () => {
+  if (window.innerWidth < 651) {
+    search.classList.toggle("content__search--hide");
+    document
+      .querySelector(".content__add-btn--small")
+      .classList.toggle("content__search--hide");
+    searchBtn.classList.toggle("content__search--hide");
+    searchHide.classList.toggle("content__search--hide");
+  }
+};
+
+searchBtn.addEventListener("click", searchToggle);
+searchHide.addEventListener("click", searchToggle);

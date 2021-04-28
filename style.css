@@ -52,6 +52,7 @@ body {
     display: inline;
     font-size: 22px;
     margin-right: 10px;
+    margin-left: 15px;
     border: none;
     outline: none;
     cursor: pointer;
@@ -169,7 +170,8 @@ body {
   padding: 4px;
 }
 
-.search-icon {
+.search-icon,
+.close-icon {
   color: rgb(213, 211, 211);
   font-size: 20px !important;
   transform: scaleX(-1);
@@ -218,7 +220,8 @@ body {
   border: 1px solid rgba(95, 102, 115, 0.1);
 }
 
-.content__form-btn {
+.content__form-btn,
+.content__search-close {
   width: 48px;
   border: none;
   background-color: transparent;
@@ -228,17 +231,25 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  border: 1px solid #fff;
-  border-radius: 3px;
+  border: none;
   background: 0 0;
   outline: 0;
   cursor: pointer;
   padding: 10px 15px 9px;
 }
 
+.content__search-close--hide {
+  display: none;
+}
+
 .content__header-btn--add {
   height: 40px;
   margin: 0 14px;
+}
+
+.content__search-hide {
+  background: none;
+  outline: none;
 }
 
 .help__btn {
@@ -304,10 +315,19 @@ body {
 @media (max-width: 750px) {
   .content__add-btn--small {
     display: inline;
-    margin: 0 15px;
+    margin-right: 25px;
+    margin-left: 10px;
   }
 
   .content__header-btn--add {
+    display: none;
+  }
+
+  .content__search-close--hide {
+    display: inline;
+  }
+
+  .content__search--hide {
     display: none;
   }
 }
