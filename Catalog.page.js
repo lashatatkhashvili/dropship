@@ -1,6 +1,7 @@
 import { products, product, loading } from "./Product.js";
 
 const productsWrapper = document.querySelector(".products-wrapper");
+const singleProduct = document.querySelector(".single-product");
 const search = document.querySelector("#search");
 const sort = document.querySelector("#sort");
 const add = document.querySelector("#add-all");
@@ -124,3 +125,48 @@ const searchToggle = () => {
 
 searchBtn.addEventListener("click", searchToggle);
 searchHide.addEventListener("click", searchToggle);
+
+// Onclick modules
+
+// Check
+
+window.check = function check(elem) {
+  const clear = document.querySelector("#clear");
+  const elems = document.querySelectorAll(".product__check");
+
+  if (window.innerWidth > 1155) {
+    let check = false;
+
+    for (let i = 0; i < elems.length; i++) {
+      if (elems[i].checked == true) {
+        check = true;
+        break;
+      }
+    }
+
+    check
+      ? clear.classList.remove("content__header-btn--clear")
+      : clear.classList.add("content__header-btn--clear");
+  }
+
+  elem.parentNode.classList.toggle("product__add--click");
+  elem.parentNode.parentNode.classList.toggle("product--border");
+  elem.parentNode.children[1].classList.toggle("product__check-label--non");
+
+  let count = document.querySelector("#count");
+
+  count.innerHTML = elem.checked
+    ? Number(count.innerHTML) + 1
+    : Number(count.innerHTML) - 1;
+};
+
+// Single Product
+
+window.singleProduct = async function singleProduct(elem) {
+  const data = await products();
+
+  let id = elem.children[0].classList[0];
+
+  let single = data.find((item) => item.id == id);
+  console.log(single);
+};

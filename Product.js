@@ -7,7 +7,8 @@ export const product = (data) => {
 
   data.map((item) => {
     productHtml += `
-    <div class="product">
+    <div class="product"  onclick="singleProduct(this)" >
+    <div  class=${item.id}  style="display: none"></div>
       <div class="product__add">
         <input type="checkbox" class="product__check" onclick="check(this)"/>
         <label for="check" class="product__check-label"
@@ -30,6 +31,7 @@ export const product = (data) => {
         <p product__info-paragraph>Profit: 25% / $2</p>
         <p product__info-paragraph>cost: $${item.price}</p>
       </div>
+      
   </div>
 
 `;
