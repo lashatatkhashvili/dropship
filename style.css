@@ -316,6 +316,10 @@ body {
 }
 
 @media (max-width: 750px) {
+  .content__sort {
+    border-top: 1px solid #dddddd;
+    justify-content: center;
+  }
   .content__add-btn--small {
     display: inline;
     margin-right: 25px;
@@ -423,7 +427,7 @@ body {
 
 @media (max-width: 580px) {
   .product {
-    width: calc(100% - 20px);
+    width: calc(100% - 40px);
   }
 }
 
@@ -590,7 +594,6 @@ body {
 
 .content__sort-select {
   margin-left: 10px;
-  padding-right: 5px;
   border: none;
   outline: none;
   cursor: pointer;
@@ -636,4 +639,21 @@ body {
   cursor: pointer;
 }
 
-/* gelaia */
+/* Mobile */
+
+@media (max-width: 499px) {
+  .content__header {
+    padding: 10px;
+    justify-content: space-between;
+  }
+
+  .products-wrapper {
+    padding: 0;
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  .content__add-btn--small {
+    margin: 0;
+  }
+}
