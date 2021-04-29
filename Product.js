@@ -10,7 +10,11 @@ export const product = (data) => {
     <div class="product"  onclick="singleProduct(this)" >
     <div  class=${item.id}  style="display: none"></div>
       <div class="product__add">
-        <input type="checkbox" class="product__check" onclick="check(this)"/>
+        <div class="round">
+          <input type="checkbox" id="${item.id}" class="product__check" onclick="check(this)"/>
+          <label for="${item.id}"></label>
+        </div>
+        
         <label for="check" class="product__check-label"
           >Add To Inventory</label
         >
