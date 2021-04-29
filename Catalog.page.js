@@ -168,14 +168,24 @@ window.check = function check(elem) {
 
 // Single Product
 
-window.singleProduct = async function singleProduct(elem) {
-  // const checkBox = document.getElementById(
-  //   `${elem.children[1].children[0].children[0].id}`
-  // );
-  // modal.style.display = "flex";
-  // const data = await products();
-  // let id = elem.children[0].classList[0];
-  // let single = data.find((item) => item.id == id);
+window.singleProduct = async function singleProduct(elem, event) {
+  const checkBox = document
+    .getElementById(`${elem.children[1].children[0].children[0].id}`)
+    .getBoundingClientRect();
+
+  if (
+    !(
+      event.clientX > checkBox.x &&
+      event.clientX < checkBox.x + checkBox.width &&
+      event.clientY > checkBox.y &&
+      event.clientY < checkBox.y + checkBox.height
+    )
+  ) {
+    modal.style.display = "flex";
+    const data = await products();
+    let id = elem.children[0].classList[0];
+    let single = data.find((item) => item.id == id);
+  }
 };
 
 // Close Modal

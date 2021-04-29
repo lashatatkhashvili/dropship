@@ -7,7 +7,7 @@ export const product = (data) => {
 
   data.map((item) => {
     productHtml += `
-    <div class="product"  onclick="singleProduct(this)" >
+    <div class="product"  onclick="singleProduct(this, event)" >
     <div  class=${item.id}  style="display: none"></div>
       <div class="product__add">
         <div class="round">
