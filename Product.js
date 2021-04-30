@@ -55,7 +55,7 @@ export const singleProduct = (item) => {
             <div class="single-product__prices">
               <p single-product__paragraph>RRP: $6</p>
               <p single-product__paragraph>Profit: 25% / $2</p>
-              <p single-product__paragraph>Cost: ${item.price}</p>
+              <p single-product__paragraph>Cost: $${item.price}</p>
             </div>
 
             <div class="single-product__album">
