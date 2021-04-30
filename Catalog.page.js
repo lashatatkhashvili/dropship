@@ -115,7 +115,7 @@ toggleAdd.addEventListener("click", toggleAddFunc);
 //  Search hide-show
 
 const searchToggle = () => {
-  if (window.innerWidth < 651) {
+  if (window.innerWidth < 751) {
     search.classList.toggle("content__search--hide");
     document
       .querySelector(".content__add-btn--small")

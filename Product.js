@@ -90,48 +90,49 @@ export const singleProduct = (item) => {
   return productHtml;
 };
 
-export const loading = `<div class="product" style="min-height: 280px">
-<div class="product__image">
+export const loading = `
+<div class="product" style="min-height: 280px">
+  <div class="product__image">
   <img src="./assets/load.gif" width="50" height="50" />
-</div>
+  </div>
 </div>
 <div class="product" style="min-height: 280px">
-<div class="product__image">
-  <img src="./assets/load.gif" width="50" height="50" />
-</div>
-</div>
-<div class="product" style="min-height: 280px">
-<div class="product__image">
-  <img src="./assets/load.gif" width="50" height="50" />
-</div>
+  <div class="product__image">
+    <img src="./assets/load.gif" width="50" height="50" />
+  </div>
 </div>
 <div class="product" style="min-height: 280px">
-<div class="product__image">
-  <img src="./assets/load.gif" width="50" height="50" />
-</div>
-</div>
-<div class="product" style="min-height: 280px">
-<div class="product__image">
-  <img src="./assets/load.gif" width="50" height="50" />
-</div>
+  <div class="product__image">
+    <img src="./assets/load.gif" width="50" height="50" />
+  </div>
 </div>
 <div class="product" style="min-height: 280px">
-<div class="product__image">
-  <img src="./assets/load.gif" width="50" height="50" />
-</div>
-</div>
-<div class="product" style="min-height: 280px">
-<div class="product__image">
-  <img src="./assets/load.gif" width="50" height="50" />
-</div>
+  <div class="product__image">
+    <img src="./assets/load.gif" width="50" height="50" />
+  </div>
 </div>
 <div class="product" style="min-height: 280px">
-<div class="product__image">
-  <img src="./assets/load.gif" width="50" height="50" />
-</div>
+  <div class="product__image">
+    <img src="./assets/load.gif" width="50" height="50" />
+  </div>
 </div>
 <div class="product" style="min-height: 280px">
-<div class="product__image">
-  <img src="./assets/load.gif" width="50" height="50" />
+  <div class="product__image">
+    <img src="./assets/load.gif" width="50" height="50" />
+  </div>
 </div>
+<div class="product" style="min-height: 280px">
+  <div class="product__image">
+    <img src="./assets/load.gif" width="50" height="50" />
+  </div>
+</div>
+<div class="product" style="min-height: 280px">
+  <div class="product__image">
+    <img src="./assets/load.gif" width="50" height="50" />
+  </div>
+</div>
+<div class="product" style="min-height: 280px">
+  <div class="product__image">
+    <img src="./assets/load.gif" width="50" height="50" />
+  </div>
 </div>`;

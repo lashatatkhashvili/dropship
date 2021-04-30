@@ -148,14 +148,30 @@ body {
 
 /* Main Nav */
 
-.selector-container {
+.catalog__nav-title {
   display: flex;
   align-items: center;
   background-color: #49547d;
+  font-family: Gilroy-med;
   height: 45px;
   color: #fff;
   font-size: 22px;
   padding-left: 25px;
+  position: relative;
+}
+
+.catalog__nav-title--category {
+  opacity: 0.7;
+  background-color: #49547d;
+  color: #fff;
+  font-size: 15px;
+}
+
+.angle-icon {
+  position: absolute;
+  font-size: 15px;
+  font-weight: bold;
+  right: 20px;
 }
 
 /* Content Header */
