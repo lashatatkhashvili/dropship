@@ -1,4 +1,4 @@
-import { products, product, loading } from "./Product.js";
+import { products, product, loading, singleProduct } from "./Product.js";
 
 const productsWrapper = document.querySelector(".products-wrapper");
 const search = document.querySelector("#search");
@@ -8,7 +8,6 @@ const clear = document.querySelector("#clear");
 const toggleAdd = document.querySelector("#toggle-add");
 const searchBtn = document.querySelector("#search-btn");
 const searchHide = document.querySelector("#search-hide");
-const closeModal = document.querySelector(".close-modal");
 const modal = document.querySelector(".single-product");
 
 // Products
@@ -168,7 +167,7 @@ window.check = function check(elem) {
 
 // Single Product
 
-window.singleProduct = async function singleProduct(elem, event) {
+window.modalProduct = async function modalProduct(elem, event) {
   const checkBox = document
     .getElementById(`${elem.children[1].children[0].children[0].id}`)
     .getBoundingClientRect();
@@ -181,18 +180,21 @@ window.singleProduct = async function singleProduct(elem, event) {
       event.clientY < checkBox.y + checkBox.height
     )
   ) {
+    modal.innerHTML = `<img src="./assets/spinner-load.gif" width="150" height="150" />`;
     modal.style.display = "flex";
     const data = await products();
     let id = elem.children[0].classList[0];
     let single = data.find((item) => item.id == id);
+
+    modal.innerHTML = singleProduct(single);
   }
 };
 
 // Close Modal
 
-closeModal.addEventListener("click", () => {
+window.closeModal = function closeModal() {
   modal.style.display = "none";
-});
+};
 
 window.onclick = function (event) {
   if (event.target == modal) {
