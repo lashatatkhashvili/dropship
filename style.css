@@ -511,7 +511,7 @@ body {
   }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 680px) {
   .product {
     width: calc(100% - 40px);
   }
