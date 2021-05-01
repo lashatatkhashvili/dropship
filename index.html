@@ -67,6 +67,18 @@
               Choose Category
               <span class="angle-icon"> <i class="fa fa-angle-down"></i></span>
             </div>
+
+            <form class="catalog__nav-form">
+              <select class="catalog__nav-select">
+                <option value="from">Ship From</option>
+              </select>
+              <select class="catalog__nav-select">
+                <option value="to">Ship To</option>
+              </select>
+              <select class="catalog__nav-select">
+                <option value="sup">Select Supplier</option>
+              </select>
+            </form>
           </nav>
 
           <section class="content">
@@ -151,7 +163,7 @@
                 <label for="sort"
                   ><i class="fa fa-bars alt-icon"></i> Sort By:
                 </label>
-                <select id="sort" name="cars" class="content__sort-select">
+                <select id="sort" class="content__sort-select">
                   <option value="new">New Arrivals</option>
                   <option value="high">Price: High To Low</option>
                   <option value="low">Price: Low To High</option>

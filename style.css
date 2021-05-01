@@ -116,12 +116,6 @@ body {
   display: flex;
 }
 
-.catalog__nav {
-  width: 220px;
-  height: 100vh;
-  border-right: 1px solid #d4d4d4;
-}
-
 .content {
   flex: 1;
   height: 100%;
@@ -148,6 +142,12 @@ body {
 
 /* Main Nav */
 
+.catalog__nav {
+  width: 220px;
+  height: 100vh;
+  background: #ecedf5;
+}
+
 .catalog__nav-title {
   display: flex;
   align-items: center;
@@ -172,6 +172,23 @@ body {
   font-size: 15px;
   font-weight: bold;
   right: 20px;
+}
+
+.catalog__nav-form {
+  padding: 0 8px 0 9px;
+}
+
+.catalog__nav-select {
+  width: 100%;
+  margin-top: 20px;
+  font-family: Gilroy-med;
+  font-size: 12px;
+  font-weight: 500;
+  color: #1a1f33;
+  padding: 6px;
+  border: none;
+  outline: none;
+  text-transform: capitalize;
 }
 
 /* Content Header */
@@ -603,7 +620,7 @@ body {
   height: 30px;
   overflow: hidden;
   width: 100%;
-  font-family: Gilroy;
+  font-family: Gilroy-med;
   font-size: 14px;
   color: #29304b;
   margin: 0;
